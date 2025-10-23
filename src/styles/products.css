@@ -1,0 +1,207 @@
+/* Products.css */
+
+/* Containers */
+.products-page {
+    background: #F8F8F8;
+    min-height: 100vh;
+  }
+  
+  /* Banner */
+  .products-banner {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #1A1A1A;
+  }
+  
+  .products-banner h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .products-banner p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Filters */
+  .filters-container {
+    padding: 60px 20px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .filters-bar {
+    background: #FFFFFF;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    border: 1px solid #F0F0F0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  
+  .filters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    align-items: end;
+  }
+  
+  .filter-select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #1A1A1A;
+    background: #FAFAFA;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .filter-select:focus {
+    outline: none;
+    border-color: #fbacc1;
+  }
+  
+  /* Product grid */
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Product card */
+  .product-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  }
+  
+  /* Badges */
+  .product-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+    z-index: 2;
+  }
+  
+  .product-badge.special { background: #fbacc1; }
+  .product-badge.new { background: #1A1A1A; }
+  
+  /* Wishlist button */
+  .wishlist-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255,255,255,0.9);
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    transition: all 0.3s ease;
+  }
+  
+  .wishlist-btn:hover {
+    background: white;
+    transform: scale(1.1);
+  }
+  
+  /* Product image overlay */
+  .product-image {
+    height: 300px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .product-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    padding: 20px;
+    color: white;
+  }
+  
+  .product-overlay h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  }
+  
+  .product-overlay span {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .product-overlay .original-price {
+    text-decoration: line-through;
+    opacity: 0.7;
+    margin-left: 8px;
+    font-size: 0.9rem;
+  }
+  
+  /* Pagination */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 40px;
+    padding: 20px;
+  }
+  
+  .pagination button {
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 44px;
+  }
+  
+  .pagination button.current {
+    background: #fbacc1;
+    color: white;
+    border: 1px solid #fbacc1;
+    font-weight: 600;
+  }
+  
+  .pagination button.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .filters-grid {
+      grid-template-columns: 1fr !important;
+    }
+  }
+  
